@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +12,7 @@ public class ContaTerminal {
 
     public static String[] PegarDadosCliente() {
 
-        try (Scanner terminal = new Scanner(System.in)) {
+        try (Scanner terminal = new Scanner(System.in).useDelimiter("\n")) {
 
             System.out.println("Informe o número da conta");
             int conta = terminal.nextInt();
@@ -21,7 +22,6 @@ public class ContaTerminal {
             String nomeCliente = terminal.next();
             System.out.println("Informe o saldo inicial");
             double saldo = terminal.nextDouble();
-            terminal.close();
 
             List<String> dadosCliente = new ArrayList<String>();
 
@@ -43,10 +43,11 @@ public class ContaTerminal {
         String conta = args[0];
         String agencia = args[1];
         String nomeCliente = args[2];
-        String saldo = args[3];
+        double saldo = Double.parseDouble(args[3]);
+        String saldo2 = String.format("%.2f", saldo);
 
         System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é "
-                + agencia + ", conta " + conta + " e seu saldo " + saldo + " já está disponível para saque.");
+                + agencia + ", conta " + conta + " e seu saldo " + saldo2 + " já está disponível para saque.");
 
     }
 
