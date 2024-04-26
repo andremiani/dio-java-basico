@@ -46,7 +46,7 @@ public class ContaTerminal {
         String saldo2 = String.format("%.2f", saldo);
 
         System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é "
-                + agencia + ", conta " + conta + " e seu saldo " + saldo2 + " já está disponível para saque.");
+                + agencia + ", conta " + conta + " e seu saldo R$" + saldo2 + " já está disponível para saque.");
 
     }
 
