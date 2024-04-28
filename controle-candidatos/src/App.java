@@ -15,8 +15,14 @@ public class App {
         String[] candidatos = { "FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO", "MONICA", "FABRÍCIO", "MIRELA",
                 "DANIELA", "JORGE" };
 
+        System.out.println("----------------------------------");
+
         // 2. SELECIONA OS CANDIDATOS
         List<String> candidatosSelecionados = processoSeletivo.selecionarCandidatos(candidatos);
+
+        System.out.println("----------------------------------");
+
+        System.out.println("Os candidatos selecionados foram: " + candidatosSelecionados);
 
         System.out.println("----------------------------------");
 

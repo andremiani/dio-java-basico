@@ -37,8 +37,6 @@ public class ProcessoSeletivo {
             idxCandidato++;
         }
 
-        System.out.println("Os candidatos selecionados foram: " + candidatosSelecionados);
-
         return candidatosSelecionados;
 
     }
