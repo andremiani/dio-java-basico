@@ -11,12 +11,13 @@ public class ContaTerminal {
 
     public static String[] PegarDadosCliente() {
 
-        try (Scanner terminal = new Scanner(System.in).useDelimiter("\n")) {
+        try (Scanner terminal = new Scanner(System.in)) {
 
             System.out.println("Informe o número da conta");
             int conta = terminal.nextInt();
             System.out.println("Informe o número da agência");
             String agencia = terminal.next();
+            // terminal.nextLine();
             System.out.println("Informe o nome do cliente");
             String nomeCliente = terminal.next();
             System.out.println("Informe o saldo inicial");
